@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dni: MyString
+  name: MyString
+  paternal: MyString
+  maternal: MyString
+  address: MyString
+  phone: 1
+  mail: MyString
+  range: MyString
+
+two:
+  dni: MyString
+  name: MyString
+  paternal: MyString
+  maternal: MyString
+  address: MyString
+  phone: 1
+  mail: MyString
+  range: MyString

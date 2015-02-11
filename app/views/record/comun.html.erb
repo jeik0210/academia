@@ -1,0 +1,41 @@
+<div class="row-fluid">
+  <div class="col-md-4" ></div>
+  <div class="col-md-4" >
+    <div class="jumbotron">
+      <div class="container">
+        <%= form_tag(comun_student_path , method: 'post') do %>
+    <div class="form-group">
+        <%= label_tag :name, 'Nombres'%>
+        <%= text_field_tag :name , '', class: 'form-control' , placeholder: 'Nombres'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :apellido, 'Apellidos '%>
+        <%= text_field_tag :paterno , '', class: 'form-control' , placeholder: 'Paterno'%> <br> 
+        <%= text_field_tag :materno , '', class: 'form-control' , placeholder: 'Maternal'%>
+    </div>
+     <div class="form-group">
+        <%= label_tag :dni, 'DNI '%>
+        <%= text_field_tag :dni , '', class: 'form-control' , placeholder: 'dni'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :edad, 'Edad'%>
+        <%= text_field_tag :edad , '', class: 'form-control' , placeholder: 'edad'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :direccion, 'direccion'%>
+        <%= text_field_tag :direccion , '', class: 'form-control' , placeholder: 'direccion'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :mail, 'Correo'%>
+        <%= text_field_tag :mail , '', class: 'form-control' , placeholder: 'correo'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :telefono, 'Telefono'%>
+        <%= text_field_tag :telefono , '', class: 'form-control' , placeholder: 'telefono'%>
+    </div>
+   <%= submit_tag 'Enviar',class: 'btn btn-primary'%>
+   <% end %>
+    </div>
+  </div>
+  
+</div> 
