@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get 'principal' => 'record#index' , as: :index
+  resources :tests
+
+  resources :patients
+
+  devise_for :employees
+  get 'principal' => 'record#index' , as: :student_index
   get 'alumnocomun' => 'record#comun' , as: :comun_student
 
   get 'record/worker'
+  post 'guardar_estudiante' => 'record#create' , as: :create_student
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

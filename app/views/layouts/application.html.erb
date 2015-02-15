@@ -9,7 +9,7 @@
 <body>
 <div class="row-fluid">
 
-<nav class="navbar navbar-inverse " role="navigation">
+<nav class="navbar navbar-default " role="navigation">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -48,13 +48,15 @@
     
  
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Ayuda</a></li>
+      
       <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Buscar">
       </div>
       <button type="submit" class="btn btn-default">Enviar</button>
     </form>
+    <li><%= link_to 'Registrarse', new_employee_registration_path %></li>
+    <li><%= link_to 'Iniciar Sesion', new_employee_session_path %></li>
        <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           Jeison <b class="caret"></b>
@@ -63,14 +65,20 @@
           <li><a href="#">Preguntas Frecuentes</a></li>
           <li><a href="#">Contactenos</a></li>
           <li class="divider"></li>
-          <li><a href="#">Salir</a></li>
+          <li><%= link_to 'salir',  destroy_employee_session_path , method: 'delete' %></li>
         </ul>
       </li>
     </ul>
   </div>
 </nav>
-
-<%= yield %>
+   <% flash.each do |name, msg| %>
+        <% content_tag(:div, msg , class: 'alert alert-#(name)')%>
+   <% end %>
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <%= yield %>
+    </div>    
+  </div>
 
 </body>
 </html>

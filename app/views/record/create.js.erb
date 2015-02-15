@@ -1,0 +1,8 @@
+if ('<%= @student.errors.any? %>' == 'true') {
+	var messages = '<%= @student.errors.full_messages %>';
+	alert(messages);	
+}
+else{
+	alert('alumno ingresado con éxito, DNI: <%= @student.dni %>');
+	$('#table').html("<%= j (render 'table' )%>");
+}

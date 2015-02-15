@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>History clinic:</strong>
+  <%= @test.history_clinic %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @test.patient %>
+</p>
+
+<p>
+  <strong>Occupational:</strong>
+  <%= @test.occupational %>
+</p>
+
+<p>
+  <strong>Enfermedad:</strong>
+  <%= @test.enfermedad %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

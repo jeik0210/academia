@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  history_clinic: MyString
+  patient_id: 
+  occupational: MyString
+  enfermedad: MyString
+
+two:
+  history_clinic: MyString
+  patient_id: 
+  occupational: MyString
+  enfermedad: MyString

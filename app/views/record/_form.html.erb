@@ -1,0 +1,49 @@
+<%= form_tag(create_student_path,method: 'post',role: 'form', remote: true) do %>
+
+<div class="row-fluid">
+    
+    <div class="form-group">
+        <%= label :student, :name, 'Nombres' %>
+        <%= text_field :student, :name ,class: 'form-control'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :paternal, 'Apellidos '%>
+        <%= text_field :student ,:paternal, class: 'form-control' , placeholder: 'Paterno'%> <br> 
+        <%= text_field_tag :student , :maternal, class: 'form-control' , placeholder: 'Maternal'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :dni, 'DNI '%>
+        <%= text_field :patient, :dni, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :years, 'Edad'%>
+        <%= text_field_tag :years , '', class: 'form-control' , placeholder: 'edad'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :address, 'direccion'%>
+        <%= text_field :student, :address , class: 'form-control' , placeholder: 'direccion'%>
+    </div>
+    <div class="form-group">
+        <%= label :student, :sex , 'Masculino', :value =>"true"%>
+        <%= radio_button :student,:sex , true %>
+        <br>
+        <%= label :student , :sex, 'Femenino', :value => "false" %>
+        <%= radio_button :student, :sex ,false %>
+    </div>
+    <div class="form-group">
+        <%= label_tag :mail, 'Correo'%>
+        <%= text_field :student , :mail, class: 'form-control' , placeholder: 'correo'%>
+    </div>
+    <div class="form-group">
+        <%= label_tag :phone, 'Telefono'%>
+        <%= text_field_tag :student, :phone, class: 'form-control' , placeholder: 'telefono'%>
+    </div>
+    <div class="text-center top-buffer">
+    <%= button_tag type: 'submit', class: "btn btn-success text-center" do %>
+    Guardar <span class="glyphicon glyphicon-floppy-disk"></span>
+    <% end %>
+    </div>
+<% end %>
+
+
+
